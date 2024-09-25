@@ -13,25 +13,22 @@ function App() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewPassanger({ ...newPassanger, [name]: value });
-    setError(''); // Clear the error when user starts typing
+    setError(''); 
   };
 
   const handleAddPassanger = () => {
     const { name, age, birthPreference } = newPassanger;
 
-    // Validate if all fields are filled
     if (!name || !age || !birthPreference) {
       setError('All fields are required');
       return;
     }
 
-    // Validate age is a positive number
     if (isNaN(age) || age <= 0) {
       setError('Age must be a positive number');
       return;
     }
 
-    // Check for duplicate passenger
     const duplicate = passenger.some(
       (pass) => pass.name === name && pass.birthPreference === birthPreference
     );
@@ -42,10 +39,10 @@ function App() {
       return;
     }
 
-    // Add the new passenger if validation passes
+    
     setPassenger([...passenger, newPassanger]);
     setNewPassanger({ name: '', age: '', birthPreference: '' });
-    setError(''); // Clear any error message after a successful add
+    setError(''); 
   };
 
   const handleDeletePassenger = (index) => {

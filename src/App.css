@@ -40,7 +40,7 @@
 .read-the-docs {
   color: #888;
 }
-/* General styling for the app container */
+
 .container {
   width: 400px;
   margin: 0 auto;
@@ -51,7 +51,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form element styles */
+
 .form-group {
   display: flex;
   flex-direction: column;
